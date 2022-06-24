@@ -1,8 +1,8 @@
+import pathlib
 from webdav3.client import Client
 import os
-import pathlib
-import numpy as np
 import laspy
+import numpy as np
 import argparse
 arg_parser = argparse.ArgumentParser()
 
@@ -30,13 +30,13 @@ param_max_filesize = args.param_max_filesize
 param_password = args.param_password
 param_remote_path_root = args.param_remote_path_root
 
-conf_remote_path_split = pathlib.Path(param_remote_path_root + '/split')
-conf_wd_opts = { 'webdav_hostname': param_hostname, 'webdav_login': param_login, 'webdav_password': param_password}
 conf_remote_path_ahn = os.path.join(param_remote_path_root,'ahn')
+conf_wd_opts = { 'webdav_hostname': param_hostname, 'webdav_login': param_login, 'webdav_password': param_password}
+conf_remote_path_split = pathlib.Path(param_remote_path_root + '/split')
 
-conf_remote_path_split = pathlib.Path(param_remote_path_root + '/split')
-conf_wd_opts = { 'webdav_hostname': param_hostname, 'webdav_login': param_login, 'webdav_password': param_password}
 conf_remote_path_ahn = os.path.join(param_remote_path_root,'ahn')
+conf_wd_opts = { 'webdav_hostname': param_hostname, 'webdav_login': param_login, 'webdav_password': param_password}
+conf_remote_path_split = pathlib.Path(param_remote_path_root + '/split')
 
 def save_chunk_to_laz_file(in_filename, 
                            out_filename, 
